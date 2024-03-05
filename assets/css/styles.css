@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger.active .line2 {
+    opacity: 0;
+  }
+
+  .burger.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .dropdown-content.active {
+    display: block;
+  }
+
+  .content {
+    padding-top: 60px; /* adjust this value based on your navbar height */
+  }
+}
